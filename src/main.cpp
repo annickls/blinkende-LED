@@ -32,5 +32,4 @@ void loop() {
   Serial.print("\n\n");
   }
   while(1);
-  
 }
