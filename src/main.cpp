@@ -31,5 +31,6 @@ void loop() {
   Serial.print(spannung2);
   Serial.print("\n\n");
   }
+  Serial.print("2. Test für Github Versionierung");
   while(1);
 }
