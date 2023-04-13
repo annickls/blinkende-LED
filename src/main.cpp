@@ -65,7 +65,7 @@ void setup() {
   pinMode(muxS3, OUTPUT);
 
   Serial.begin(9600);
-  
+
   // Serial.println("\n hello from the setup");
   // pinMode(greenLedPin, OUTPUT);
 }
@@ -93,51 +93,42 @@ void loop() {
 
   //Einlesen von Potentiometern ueber einen Multiplexer
     // send a 0001 for output "1"
-    for(int j=1;j<10;j=j+1){
+    for(int j=0;j<16;j=j+1){
 
-    // 3 Potis Ringfinger
-    Serial.print("Potis Ringfinger \n");
-    // float voltage = floatMap(readMux(0), 0, 4095, 0, 3.3); //Spannung skalieren
-    float angle = map(readMux(0), 0, 4095, 0, 300);
-    Serial.print("Analog: \n");
-    Serial.println(readMux(0));
-    // Serial.print("\nVoltage: ");
-    // Serial.print(voltage);
-    Serial.print("Angle: \n");
-    Serial.print(angle);
+    Serial.print("Value at channel ");
+    Serial.print(j);
+    Serial.print(" is : ");
+    Serial.println(readMux(j));
+    
+    // // 3 Potis Ringfinger
+    // Serial.print("Potis Ringfinger \n");
+    // // float voltage = floatMap(readMux(0), 0, 4095, 0, 3.3); //Spannung skalieren
+    // float angle = map(readMux(0), 0, 4095, 0, 300);
+    // Serial.print("Analog: \n");
+    // Serial.println(readMux(0));
+    // // Serial.print("\nVoltage: ");
+    // // Serial.print(voltage);
+    // Serial.print("Angle: \n");
+    // Serial.print(angle);
 
-    float angle1 = map(readMux(1), 0, 4095, 0, 300);
-    Serial.print("\nAnalog: \n");
-    Serial.println(readMux(1));
-    Serial.print("Angle: \n");
-    Serial.print(angle1);
+    // float angle1 = map(readMux(1), 0, 4095, 0, 300);
+    // Serial.print("\nAnalog: \n");
+    // Serial.println(readMux(1));
+    // Serial.print("Angle: \n");
+    // Serial.print(angle1);
 
-    float angle2 = map(readMux(2), 0, 4095, 0, 300);
-    Serial.print("\nAnalog: \n");
-    Serial.println(readMux(2));
-    Serial.print("Angle: \n");
-    Serial.print(angle2);
+    // float angle2 = map(readMux(2), 0, 4095, 0, 300);
+    // Serial.print("\nAnalog: \n");
+    // Serial.println(readMux(2));
+    // Serial.print("Angle: \n");
+    // Serial.print(angle2);
 
-    Serial.print("\n \n");
+    // Serial.print("\n \n");
 
-    // 3 Potis Mittelfinger
+
+    // Potis Mittelfinger
     // Serial.print("Potis Mittelfinger \n");
     // digitalWrite(muxS0, 1);
-    // digitalWrite(muxS1, 1);
-    // digitalWrite(muxS2, 0);
-    // digitalWrite(muxS3, 0);
-    // int val4 = analogRead(muxSIG);
-    // Serial.print(val4);
-    // Serial.print("\n ");
-
-    // digitalWrite(muxS0, 0);
-    // digitalWrite(muxS1, 0);
-    // digitalWrite(muxS2, 1);
-    // digitalWrite(muxS3, 0);
-    // int val5 = analogRead(muxSIG);
-    // Serial.print(val5);
-    // Serial.print("\n");
-
     // digitalWrite(muxS0, 1);
     // digitalWrite(muxS1, 0);
     // digitalWrite(muxS2, 1);
